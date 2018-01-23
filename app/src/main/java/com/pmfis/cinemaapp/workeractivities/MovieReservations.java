@@ -126,7 +126,7 @@ public class MovieReservations extends AppCompatActivity {
         call.enqueue(new Callback<ReservationResponse>() {
             @Override
             public void onResponse(Call<ReservationResponse> call, Response<ReservationResponse> response) {
-                Toast.makeText(getBaseContext(), "Reservation deleted", Toast.LENGTH_SHORT);
+                Toast.makeText(getBaseContext(), "Reservation deleted", Toast.LENGTH_SHORT).show();
                 refreshList();
             }
 
