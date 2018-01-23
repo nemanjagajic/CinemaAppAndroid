@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pmfis.cinemaapp.clientactivities.ClientAccount"
+    android:background="@color/colorItem">
+
+    <TextView
+        android:id="@+id/user_username_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/user_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@id/user_username_title"/>
+
+    <TextView
+        android:id="@+id/user_reservation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reservations"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/user_username"/>
+
+    <ProgressBar
+        android:id="@+id/user_pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_below="@id/user_reservation_title"
+        android:layout_marginTop="120dp"/>
+
+    <ListView
+        android:id="@+id/user_reservation_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:paddingBottom="15dp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_below="@id/user_reservation_title" />
+
+
+</RelativeLayout>

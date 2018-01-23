@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.pmfis.cinemaapp.workeractivities.AddMovie"
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert title"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorWhite"/>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert genre"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_genre"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="genre"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Insert time"
+    android:textSize="@dimen/largeText"
+    android:textColor="@color/colorWhite"
+    android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_time"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="time"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert imdb link"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_imdb_link"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="link (not required)"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert price"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/et_price"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="price"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:layout_marginBottom="20dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/users_panel_add_button"
+        android:layout_margin="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:tint="@color/colorBackground"
+        android:src="@drawable/ic_check_black_24dp"
+        android:backgroundTint="@color/colorAccent"
+        app:borderWidth="0dp"
+        android:onClick="onAddMovieClicked"/>
+
+</LinearLayout>

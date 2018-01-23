@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bill_item_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorItem">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7">
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prestige"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/largeText"/>
+
+            <TextView
+                android:id="@+id/movie_genre"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="Drama, Mistery"
+                android:textAlignment="center"
+                android:textSize="@dimen/mediumText"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/movie_genre_title"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:text="Genre:"
+                android:textSize="@dimen/smallText"
+                android:textAlignment="center"
+                android:layout_above="@id/movie_genre"/>
+
+            <TextView
+                android:id="@+id/movie_time"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:text="14:30/22:15/12:10"
+                android:textAlignment="center"
+                android:textSize="@dimen/mediumText"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/movie_time_title"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#808080"
+                android:text="Time:"
+                android:textSize="@dimen/smallText"
+                android:textAlignment="center"
+                android:layout_above="@id/movie_time"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_right"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorItem"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/movie_button_reservations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_event_seat_black_24dp"
+                android:background="#00000000"
+                android:layout_gravity="center"
+                android:tint="@color/colorAccent"
+                android:onClick="onReservationsMovieClicked"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="5dp"/>
+
+            <ImageButton
+                android:id="@+id/button_movie_more_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_black_24dp"
+                android:background="#00000000"
+                android:layout_gravity="center"
+                android:tint="@color/colorAccent"
+                android:onClick="onMoreAboutMovieClicked"
+                android:layout_marginRight="5dp"/>
+
+            <ImageButton
+                android:id="@+id/movie_button_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:background="#00000000"
+                android:layout_gravity="center"
+                android:tint="@color/colorAccent"
+                android:onClick="onDeleteMovieClicked"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginRight="5dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

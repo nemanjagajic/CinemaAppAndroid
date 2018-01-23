@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pmfis.cinemaapp.workeractivities.MovieReservations"
+    android:background="@color/colorItem">
+
+    <TextView
+        android:id="@+id/movie_reservations_title_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/movie_reservations_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/largeText"
+        android:textAlignment="center"
+        android:textColor="#808080"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/movie_reservations_title_movie"/>
+
+    <TextView
+        android:id="@+id/movie_reservations_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="reservations"
+        android:textSize="@dimen/largeText"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/movie_reservations_time"/>
+
+    <ListView
+        android:id="@+id/movie_reservations_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0dp"
+        android:paddingBottom="15dp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_below="@id/movie_reservations_title"/>
+
+    <ProgressBar
+        android:id="@+id/movie_reservations_pb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_below="@id/movie_reservations_title"
+        android:layout_marginTop="120dp"/>
+
+</RelativeLayout>
