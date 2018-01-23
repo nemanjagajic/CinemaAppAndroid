@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.pmfis.cinemaapp.R;
 import com.pmfis.cinemaapp.adapter.MovieAdapter;
@@ -26,7 +27,7 @@ import retrofit2.Response;
 
 public class Movies extends AppCompatActivity {
 
-    public static int loggedPersonId;
+    public static int loggedPersonId; // -1 if logged as guest
 
     private ArrayList<Movie> movies;
     private MovieAdapter adapter;
@@ -92,8 +93,12 @@ public class Movies extends AppCompatActivity {
     }
 
     public void onMoreAboutMovieClicked(View view) {
-        startActivity(new Intent(this, Reservation.class).putExtra("EXTRA_SESSION_ID",
-                view.getContentDescription() + ""));
+        if (loggedPersonId == -1) {
+            Toast.makeText(this, "You must be logged in to access this", Toast.LENGTH_SHORT).show();
+        } else {
+            startActivity(new Intent(this, Reservation.class).putExtra("EXTRA_SESSION_ID",
+                    view.getContentDescription() + ""));
+        }
     }
 
     @Override
@@ -114,7 +119,11 @@ public class Movies extends AppCompatActivity {
                 refreshList();
                 return true;
             case R.id.account_item:
-                startActivity(new Intent(this, ClientAccount.class));
+                if (loggedPersonId == -1) {
+                    Toast.makeText(this, "You're logged in as a guest", Toast.LENGTH_SHORT).show();
+                } else {
+                    startActivity(new Intent(this, ClientAccount.class));
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

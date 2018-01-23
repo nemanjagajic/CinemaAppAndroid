@@ -31,6 +31,7 @@
         android:layout_marginTop="30dp"
         android:text="Log in as guest"
         android:textColor="@color/colorWhite"
-        android:background="#353535"/>
+        android:background="#353535"
+        android:onClick="onLogInAsGuestClicked"/>
 
 </LinearLayout>
